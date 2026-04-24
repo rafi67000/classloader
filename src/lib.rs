@@ -16,7 +16,7 @@ mod jni {
             env: &JNIEnv<'env>,
             name: JObject<'env>
         ) -> bool {
-            let this_class = env.find_class("de/jpx3/ClassLoader")
+            let this_class = env.find_class("de/jpx3/classloader/ClassLoader")
                 .expect("Intave ClassLoader class not found");
 
             if name.is_null() {
@@ -50,7 +50,7 @@ mod jni {
                 return JObject::null();
             }
 
-            let this_class = env.find_class("de/jpx3/ClassLoader")
+            let this_class = env.find_class("de/jpx3/classloader/ClassLoader")
                 .expect("Intave ClassLoader class not found");
 
             let class_loader = env.call_method(
