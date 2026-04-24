@@ -1,0 +1,12 @@
+[package]
+name = "classloader"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "classloader"
+crate-type = ["cdylib"]
+
+[dependencies]
+robusta_jni = "0.2"
+jni = "0.22.4"
